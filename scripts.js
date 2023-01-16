@@ -1,8 +1,5 @@
 const BASE_SIZE = 16;
-
 const body = document.querySelector('body');
-
-//const squares = [];
 
 function addChoiceButton() {
     let newButton = document.createElement('button');
@@ -41,13 +38,10 @@ function generateRow(rows) {
         newSquare.dataset['mouseoverTimes'] = "1";
         newSquare.addEventListener('mouseover', colorSquare);
         newRow.appendChild(newSquare);
-        //squares.push(newSquare);
-
     }
 }
 
 function colorSquare(e) {
-
 
     e.target.style['background-color'] = 'black';
 
@@ -61,7 +55,6 @@ function colorSquare(e) {
         console.log(newColor);
 
         e.target.style['background-color'] = newColor;
-
         e.target.dataset['mouseoverTimes'] = mouseroverTimes + 1;
     }, 100);
 }
